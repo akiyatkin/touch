@@ -1,5 +1,5 @@
 const Touch = {
-    init: (div, prev, next) => {
+    prevnext: (div, prev, next) => {
         let touchendX = 0
         let touchendY = 0
         let startX = 0
@@ -23,11 +23,9 @@ const Touch = {
             if (ratioX > ratioY) {
                 if (diffX >= 0) {
                     //console.log('right swipe')
-                    clearInterval(timer)
                     next()
                 } else {
                     //console.log('left swipe')
-                    clearInterval(timer)
                     prev()
                 }
             } else {
